@@ -1,0 +1,23 @@
+import kotlin.String;
+import kotlin.collections.List;
+
+CREATE TABLE Cashbook (
+name TEXT NOT NULL,
+tags TEXT AS List<String> NOT NULL,
+createdDate TEXT NOT NULL,
+createdTimeStamp TEXT NOT NULL,
+lastEditTimeStamp TEXT NOT NULL,
+id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+insertCashbook:
+INSERT INTO Cashbook(name, tags, createdDate, createdTimeStamp, lastEditTimeStamp,
+id)
+VALUES (?,?,?,?,?,?);
+
+removeAllCashbooks:
+DELETE FROM Cashbook;
+
+selectAllCashbooks:
+SELECT Cashbook.*
+FROM Cashbook;
