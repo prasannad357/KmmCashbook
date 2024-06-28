@@ -67,6 +67,20 @@ kotlin {
             implementation(libs.koin.compose)
 
             implementation(libs.runtime)
+
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+            implementation(libs.kotlinx.datetime)
+
+            /*
+            Navigation: Voyager
+             */
+            // Navigator
+            implementation(libs.voyager.navigator)
+            // Screen Model
+            implementation(libs.voyager.screenmodel)
+            // Koin integration
+            implementation(libs.voyager.koin)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

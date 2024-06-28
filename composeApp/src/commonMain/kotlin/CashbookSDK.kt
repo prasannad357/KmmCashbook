@@ -9,7 +9,7 @@ class CashbookSDK(databaseDriverFactory: DatabaseDriverFactory) {
     suspend fun getCashbooks():List<Cashbook>{
         //TODO: Remove print
         val cashbooks = database.getAllCashbooks()
-        println("Cashbooks: $cashbooks")
+        println("CashbookSDK cashbooks: $cashbooks")
         return cashbooks
     }
 
